@@ -7,30 +7,47 @@ import Navigation from '../components/Navigation.astro';
 	<Navigation />
 
 	<main class="hero">
-		<div class="hero-content">
-			<div class="hero-text">
-				<h1 class="hero-title">Hi, I'm <span class="highlight">Sophia</span></h1>
-				<p class="hero-intro">
-					I'm in 9th grade, and I'm passionate about stand-up comedy, speech and debate, theater, and making a difference in my community.
+		<!-- Decorative blobs -->
+		<div class="blob blob-1"></div>
+		<div class="blob blob-2"></div>
+		<div class="blob blob-3"></div>
+
+		<div class="hero-container">
+			<div class="hero-content">
+				<p class="hero-eyebrow">Hey there, I'm</p>
+				<h1 class="hero-title">
+					Sophia Sharaf<span class="title-dot">.</span>
+				</h1>
+				<p class="hero-tagline">
+					<span class="tagline-item"><span class="tagline-icon">🎭</span> Performer</span>
+					<span class="tagline-divider">/</span>
+					<span class="tagline-item"><span class="tagline-icon">🎤</span> Comedian</span>
+					<span class="tagline-divider">/</span>
+					<span class="tagline-item"><span class="tagline-icon">🔬</span> Researcher</span>
 				</p>
 				<p class="hero-description">
-					My favorite book is currently "Project Hail Mary." I speak Spanish and am currently learning Mandarin. I am bicultural, half Jewish and half Indian. Lastly, I have a mild hearing deficiency.
+					I'm a 9th grader who loves making people laugh, arguing about ideas,
+					and using science to make a difference. Currently reading <em>"Project Hail Mary"</em>,
+					learning Mandarin, and navigating life as a bicultural kid (half Jewish, half Indian)
+					with a hearing deficiency that hasn't slowed me down one bit.
 				</p>
-				<div class="hero-tags">
-					<span class="tag">Stand-Up Comedy</span>
-					<span class="tag">Speech & Debate</span>
-					<span class="tag">Theater</span>
-					<span class="tag">Research</span>
-					<span class="tag">Nonprofit</span>
-				</div>
 				<div class="hero-cta">
-					<a href="/theater" class="btn btn-primary">Explore My Work</a>
-					<a href="/awards" class="btn btn-secondary">View Awards</a>
+					<a href="/theater" class="btn btn-primary">
+						See What I Do
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+							<line x1="5" y1="12" x2="19" y2="12"></line>
+							<polyline points="12 5 19 12 12 19"></polyline>
+						</svg>
+					</a>
+					<a href="/awards" class="btn btn-secondary">My Awards</a>
 				</div>
 			</div>
-			<div class="hero-image">
-				<div class="image-placeholder">
-					<span>Photo</span>
+			<div class="hero-visual">
+				<div class="photo-frame">
+					<div class="photo-placeholder">
+						<span>Photo</span>
+					</div>
+					<div class="photo-accent"></div>
 				</div>
 			</div>
 		</div>
@@ -38,118 +55,188 @@ import Navigation from '../components/Navigation.astro';
 
 	<section class="highlights">
 		<div class="container">
-			<h2 class="section-title">What I Do</h2>
+			<div class="section-header">
+				<h2>What I'm Up To</h2>
+			</div>
 			<div class="highlights-grid">
 				<a href="/theater" class="highlight-card">
-					<div class="highlight-icon">
-						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<circle cx="12" cy="12" r="10"></circle>
-							<path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-							<line x1="9" y1="9" x2="9.01" y2="9"></line>
-							<line x1="15" y1="9" x2="15.01" y2="9"></line>
-						</svg>
-					</div>
+					<span class="card-emoji">🎭</span>
 					<h3>Theater</h3>
-					<p>Performing on stage and behind the scenes</p>
+					<p>On stage and behind the scenes</p>
+					<span class="card-arrow">→</span>
 				</a>
 				<a href="/debate" class="highlight-card">
-					<div class="highlight-icon">
-						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-						</svg>
-					</div>
+					<span class="card-emoji">💬</span>
 					<h3>Debate</h3>
-					<p>Competing at Cornell and Yale tournaments</p>
+					<p>Cornell & Yale tournaments</p>
+					<span class="card-arrow">→</span>
 				</a>
-				<a href="/comedy" class="highlight-card">
-					<div class="highlight-icon">
-						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
-							<path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-							<line x1="12" y1="19" x2="12" y2="23"></line>
-							<line x1="8" y1="23" x2="16" y2="23"></line>
-						</svg>
-					</div>
-					<h3>Stand-Up Comedy</h3>
-					<p>Performing at Gotham Comedy Club</p>
+				<a href="/comedy" class="highlight-card featured">
+					<span class="card-emoji">😂</span>
+					<h3>Stand-Up</h3>
+					<p>Gotham Comedy Club performer</p>
+					<span class="card-arrow">→</span>
 				</a>
 				<a href="/nonprofit" class="highlight-card">
-					<div class="highlight-icon">
-						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-						</svg>
-					</div>
-					<h3>Nonprofit Work</h3>
-					<p>Raising awareness for important causes</p>
+					<span class="card-emoji">💜</span>
+					<h3>Nonprofit</h3>
+					<p>Cancer awareness advocacy</p>
+					<span class="card-arrow">→</span>
 				</a>
 				<a href="/research" class="highlight-card">
-					<div class="highlight-icon">
-						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<circle cx="11" cy="11" r="8"></circle>
-							<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-						</svg>
-					</div>
+					<span class="card-emoji">🔬</span>
 					<h3>Research</h3>
-					<p>Working with MSK and Cornell on cancer research</p>
+					<p>MSK & Cornell programs</p>
+					<span class="card-arrow">→</span>
 				</a>
 				<a href="/awards" class="highlight-card">
-					<div class="highlight-icon">
-						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<circle cx="12" cy="8" r="7"></circle>
-							<polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-						</svg>
-					</div>
+					<span class="card-emoji">🏆</span>
 					<h3>Awards</h3>
-					<p>Recognition for writing and global citizenship</p>
+					<p>Writing & global citizenship</p>
+					<span class="card-arrow">→</span>
 				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="fun-facts">
+		<div class="container">
+			<div class="facts-grid">
+				<div class="fact-card">
+					<span class="fact-number">2</span>
+					<span class="fact-label">Languages (+ learning Mandarin)</span>
+				</div>
+				<div class="fact-card">
+					<span class="fact-number">2</span>
+					<span class="fact-label">Ivy League tournaments</span>
+				</div>
+				<div class="fact-card">
+					<span class="fact-number">2</span>
+					<span class="fact-label">Research institutions</span>
+				</div>
 			</div>
 		</div>
 	</section>
 </Layout>
 
 <style>
+	/* Hero Section */
 	.hero {
-		background: linear-gradient(135deg, var(--color-white) 0%, var(--color-purple-light) 100%);
-		padding: 4rem 2rem;
-		min-height: 70vh;
+		position: relative;
+		min-height: 85vh;
 		display: flex;
 		align-items: center;
+		overflow: hidden;
+		background: var(--gradient-hero);
 	}
 
-	.hero-content {
+	.blob {
+		position: absolute;
+		border-radius: 50%;
+		filter: blur(80px);
+		opacity: 0.6;
+		pointer-events: none;
+	}
+
+	.blob-1 {
+		width: 400px;
+		height: 400px;
+		background: var(--color-purple-light);
+		top: -100px;
+		right: 10%;
+		animation: float 8s ease-in-out infinite;
+	}
+
+	.blob-2 {
+		width: 300px;
+		height: 300px;
+		background: var(--color-coral-light);
+		bottom: 10%;
+		left: 5%;
+		animation: float 10s ease-in-out infinite reverse;
+	}
+
+	.blob-3 {
+		width: 200px;
+		height: 200px;
+		background: var(--color-purple);
+		opacity: 0.2;
+		top: 40%;
+		right: 30%;
+		animation: float 12s ease-in-out infinite;
+	}
+
+	@keyframes float {
+		0%, 100% { transform: translate(0, 0) scale(1); }
+		50% { transform: translate(30px, -30px) scale(1.05); }
+	}
+
+	.hero-container {
 		max-width: 1200px;
 		margin: 0 auto;
+		padding: 2rem;
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1.1fr 0.9fr;
 		gap: 4rem;
 		align-items: center;
+		position: relative;
+		z-index: 1;
+	}
+
+	.hero-eyebrow {
+		font-size: 1.1rem;
+		color: var(--color-purple);
+		font-weight: 600;
+		margin-bottom: 0.5rem;
+		letter-spacing: 0.02em;
 	}
 
 	.hero-title {
-		font-size: 3.5rem;
-		margin-bottom: 1.5rem;
-		line-height: 1.2;
-	}
-
-	.highlight {
-		color: var(--color-purple-dark);
-	}
-
-	.hero-intro {
-		font-size: 1.25rem;
-		color: var(--color-gray-dark);
+		font-size: clamp(3rem, 7vw, 4.5rem);
+		color: var(--color-ink);
 		margin-bottom: 1rem;
-		line-height: 1.7;
+		line-height: 1.1;
+	}
+
+	.title-dot {
+		color: var(--color-coral);
+	}
+
+	.hero-tagline {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.75rem;
+		font-size: 1.1rem;
+		color: var(--color-gray-600);
+		margin-bottom: 1.5rem;
+	}
+
+	.tagline-item {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+	}
+
+	.tagline-icon {
+		font-size: 1.2rem;
+	}
+
+	.tagline-divider {
+		color: var(--color-gray-400);
 	}
 
 	.hero-description {
-		color: var(--color-gray-dark);
-		margin-bottom: 1.5rem;
-		line-height: 1.7;
+		font-size: 1.15rem;
+		color: var(--color-gray-600);
+		line-height: 1.8;
+		margin-bottom: 2rem;
+		max-width: 540px;
 	}
 
-	.hero-tags {
-		margin-bottom: 2rem;
+	.hero-description em {
+		color: var(--color-purple);
+		font-style: italic;
 	}
 
 	.hero-cta {
@@ -158,147 +245,235 @@ import Navigation from '../components/Navigation.astro';
 		flex-wrap: wrap;
 	}
 
-	.btn {
-		display: inline-block;
-		padding: 0.875rem 1.75rem;
-		border-radius: 8px;
-		font-weight: 500;
-		font-size: 1rem;
-		transition: all 0.3s ease;
-	}
-
-	.btn-primary {
-		background: var(--color-black);
-		color: var(--color-white);
-	}
-
-	.btn-primary:hover {
-		background: var(--color-purple-dark);
-		color: var(--color-white);
-	}
-
-	.btn-secondary {
-		background: var(--color-white);
-		color: var(--color-black);
-		border: 1px solid var(--color-gray);
-	}
-
-	.btn-secondary:hover {
-		border-color: var(--color-purple);
-		background: var(--color-purple-light);
-	}
-
-	.hero-image {
+	/* Photo Frame */
+	.hero-visual {
 		display: flex;
 		justify-content: center;
-	}
-
-	.image-placeholder {
-		width: 350px;
-		height: 400px;
-		background: var(--color-white);
-		border: 2px dashed var(--color-purple);
-		border-radius: 20px;
-		display: flex;
 		align-items: center;
-		justify-content: center;
-		color: var(--color-purple-dark);
-		font-size: 1.25rem;
 	}
 
-	.highlights {
-		padding: 5rem 0;
-		background: var(--color-white);
-	}
-
-	.section-title {
-		text-align: center;
-		font-size: 2rem;
-		margin-bottom: 3rem;
+	.photo-frame {
 		position: relative;
 	}
 
-	.section-title::after {
+	.photo-placeholder {
+		width: 320px;
+		height: 400px;
+		background: white;
+		border-radius: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--color-gray-400);
+		font-size: 1.25rem;
+		font-weight: 500;
+		box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+		position: relative;
+		z-index: 2;
+	}
+
+	.photo-accent {
+		position: absolute;
+		inset: -8px;
+		background: var(--gradient-accent);
+		border-radius: 28px;
+		z-index: 1;
+		opacity: 0.8;
+	}
+
+	/* Highlights Section */
+	.highlights {
+		padding: 6rem 0;
+		background: var(--color-paper);
+	}
+
+	.section-header {
+		margin-bottom: 3rem;
+	}
+
+	.section-header h2 {
+		display: inline-block;
+		position: relative;
+	}
+
+	.section-header h2::after {
 		content: '';
 		position: absolute;
-		bottom: -10px;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 60px;
-		height: 3px;
-		background: var(--color-purple);
+		bottom: -8px;
+		left: 0;
+		width: 100%;
+		height: 4px;
+		background: var(--gradient-accent);
+		border-radius: 2px;
 	}
 
 	.highlights-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		gap: 1.5rem;
+		gap: 1.25rem;
 	}
 
 	.highlight-card {
-		background: var(--color-white);
-		border: 1px solid var(--color-gray);
-		border-radius: 12px;
-		padding: 2rem;
-		text-align: center;
-		transition: all 0.3s ease;
+		background: var(--color-paper);
+		border: 1px solid var(--color-gray-200);
+		border-radius: 20px;
+		padding: 1.75rem;
 		text-decoration: none;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.highlight-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 4px;
+		background: var(--gradient-accent);
+		opacity: 0;
+		transition: opacity 0.3s ease;
 	}
 
 	.highlight-card:hover {
-		border-color: var(--color-purple);
-		box-shadow: 0 8px 30px rgba(155, 125, 199, 0.15);
-		transform: translateY(-4px);
+		transform: translateY(-6px);
+		box-shadow: 0 20px 40px -12px rgba(124, 58, 237, 0.2);
+		border-color: transparent;
 	}
 
-	.highlight-icon {
-		width: 64px;
-		height: 64px;
-		background: var(--color-purple-light);
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin: 0 auto 1rem;
-		color: var(--color-purple-dark);
+	.highlight-card:hover::before {
+		opacity: 1;
+	}
+
+	.highlight-card.featured {
+		background: var(--color-ink);
+		border-color: var(--color-ink);
+	}
+
+	.highlight-card.featured h3,
+	.highlight-card.featured p,
+	.highlight-card.featured .card-arrow {
+		color: white;
+	}
+
+	.highlight-card.featured p {
+		opacity: 0.8;
+	}
+
+	.card-emoji {
+		font-size: 2rem;
+		display: block;
+		margin-bottom: 1rem;
 	}
 
 	.highlight-card h3 {
-		color: var(--color-black);
-		margin-bottom: 0.5rem;
+		color: var(--color-ink);
 		font-size: 1.25rem;
+		margin-bottom: 0.5rem;
 	}
 
 	.highlight-card p {
-		color: var(--color-gray-dark);
-		font-size: 0.9rem;
+		color: var(--color-gray-600);
+		font-size: 0.95rem;
+		margin: 0;
 	}
 
+	.card-arrow {
+		position: absolute;
+		bottom: 1.5rem;
+		right: 1.5rem;
+		color: var(--color-purple);
+		font-size: 1.25rem;
+		opacity: 0;
+		transform: translateX(-10px);
+		transition: all 0.3s ease;
+	}
+
+	.highlight-card:hover .card-arrow {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	/* Fun Facts Section */
+	.fun-facts {
+		padding: 4rem 0;
+		background: var(--color-ink);
+	}
+
+	.facts-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+	}
+
+	.fact-card {
+		text-align: center;
+		padding: 2rem;
+	}
+
+	.fact-number {
+		display: block;
+		font-family: 'DM Serif Display', serif;
+		font-size: 4rem;
+		background: var(--gradient-accent);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		line-height: 1;
+		margin-bottom: 0.5rem;
+	}
+
+	.fact-label {
+		color: rgba(255, 255, 255, 0.7);
+		font-size: 0.95rem;
+	}
+
+	/* Responsive */
 	@media (max-width: 900px) {
-		.hero-content {
+		.hero-container {
 			grid-template-columns: 1fr;
 			text-align: center;
+			gap: 3rem;
 		}
 
-		.hero-title {
-			font-size: 2.5rem;
+		.hero-visual {
+			order: -1;
+		}
+
+		.hero-tagline {
+			justify-content: center;
+		}
+
+		.hero-description {
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 		.hero-cta {
 			justify-content: center;
 		}
 
-		.hero-image {
-			order: -1;
-		}
-
-		.image-placeholder {
+		.photo-placeholder {
 			width: 250px;
-			height: 300px;
+			height: 320px;
 		}
 
 		.highlights-grid {
 			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.facts-grid {
+			grid-template-columns: 1fr;
+			gap: 1rem;
+		}
+
+		.fact-card {
+			padding: 1.5rem;
+		}
+
+		.fact-number {
+			font-size: 3rem;
 		}
 	}
 
