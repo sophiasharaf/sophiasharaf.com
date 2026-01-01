@@ -1,0 +1,231 @@
+---
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+	{ href: '/', label: 'Home' },
+	{ href: '/theater', label: 'Theater' },
+	{ href: '/debate', label: 'Debate' },
+	{ href: '/comedy', label: 'Stand-Up Comedy' },
+	{ href: '/nonprofit', label: 'Nonprofit Work' },
+	{ href: '/research', label: 'Research' },
+	{ href: '/awards', label: 'Awards' },
+];
+
+function isActive(href: string): boolean {
+	if (href === '/') {
+		return currentPath === '/' || currentPath === '';
+	}
+	return currentPath.startsWith(href);
+}
+---
+
+<header class="header">
+	<div class="header-container">
+		<a href="/" class="logo">
+			<span class="logo-text">Sophia Sharaf</span>
+		</a>
+
+		<button class="mobile-menu-btn" aria-label="Toggle menu">
+			<span class="hamburger"></span>
+		</button>
+
+		<nav class="nav">
+			<ul class="nav-list">
+				{navLinks.map(link => (
+					<li>
+						<a
+							href={link.href}
+							class:list={['nav-link', { active: isActive(link.href) }]}
+						>
+							{link.label}
+						</a>
+					</li>
+				))}
+			</ul>
+		</nav>
+
+		<div class="social-links">
+			<a href="#" class="social-link" aria-label="Instagram" title="Instagram">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+					<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+					<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+				</svg>
+			</a>
+			<a href="#" class="social-link" aria-label="IMDb" title="IMDb">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+					<path d="M14.31 9.588v.005c-.077-.048-.227-.07-.42-.07v4.815c.27 0 .44-.06.5-.165.062-.104.095-.39.095-.852v-2.857c0-.345-.013-.572-.042-.681-.03-.11-.067-.167-.133-.195zm-1.748 1.417h-.394v2.002h.394c.274 0 .456-.05.545-.152.087-.102.132-.327.132-.677v-.344c0-.35-.045-.575-.132-.677-.09-.102-.271-.152-.545-.152z"/>
+					<path d="M22.416 0H1.584C.71 0 0 .71 0 1.584v20.832C0 23.29.71 24 1.584 24h20.832c.874 0 1.584-.71 1.584-1.584V1.584C24 .71 23.29 0 22.416 0zM6.769 15.5H4.931V8.424h1.838V15.5zm5.089 0H10.2v-3.705l-.478 3.705H8.442l-.503-3.705V15.5H6.28V8.424h2.064c.094.534.178 1.068.266 1.605.08.537.15 1.08.22 1.624l.478-3.229h2.55V15.5zm4.732-1.91c0 .503-.065.867-.192 1.088-.128.22-.337.37-.632.448-.294.08-.725.12-1.29.12H12.17V8.424h2.236c.544 0 .947.04 1.214.127.267.084.46.22.58.408.12.187.182.508.182.96v1.758c0 .443-.03.77-.09.982-.06.21-.177.378-.35.505l.09.087c.143.14.243.34.3.6.06.26.088.52.088.765v1.913h.001zm3.897-.588c0 .472-.018.796-.054.97-.035.175-.112.363-.23.564-.12.2-.302.354-.552.46-.25.106-.588.158-1.013.158s-.754-.052-1.004-.158-.44-.26-.56-.46c-.118-.2-.194-.388-.23-.563-.035-.174-.052-.498-.052-.97V11.07c0-.486.028-.827.085-1.02.056-.193.162-.39.316-.595.154-.204.367-.36.64-.464.27-.106.59-.158.964-.158.374 0 .687.05.94.148.252.1.456.246.607.444.15.197.248.394.294.588.046.195.07.537.07 1.028v1.96h.001zm-1.692-1.91c0-.375-.006-.606-.016-.695-.01-.088-.036-.145-.075-.173-.038-.027-.107-.04-.206-.04-.098 0-.168.014-.207.042-.04.028-.065.086-.076.175-.01.088-.017.32-.017.694v2.692c0 .375.007.608.017.698.01.09.036.148.076.177.04.028.11.042.208.042.1 0 .168-.014.206-.042.04-.03.065-.088.076-.177.01-.09.016-.323.016-.698V11.09h-.002z"/>
+				</svg>
+			</a>
+		</div>
+	</div>
+</header>
+
+<style>
+	.header {
+		background: var(--color-white);
+		border-bottom: 1px solid var(--color-gray);
+		position: sticky;
+		top: 0;
+		z-index: 100;
+	}
+
+	.header-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 1rem 2rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+	}
+
+	.logo {
+		text-decoration: none;
+	}
+
+	.logo-text {
+		font-family: 'Playfair Display', serif;
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: var(--color-black);
+		transition: color 0.3s ease;
+	}
+
+	.logo:hover .logo-text {
+		color: var(--color-purple-dark);
+	}
+
+	.nav {
+		flex: 1;
+	}
+
+	.nav-list {
+		display: flex;
+		list-style: none;
+		gap: 0.5rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.nav-link {
+		display: block;
+		padding: 0.5rem 1rem;
+		color: var(--color-gray-dark);
+		font-size: 0.9rem;
+		font-weight: 500;
+		border-radius: 6px;
+		transition: all 0.3s ease;
+	}
+
+	.nav-link:hover {
+		color: var(--color-black);
+		background: var(--color-purple-light);
+	}
+
+	.nav-link.active {
+		color: var(--color-purple-dark);
+		background: var(--color-purple-light);
+	}
+
+	.social-links {
+		display: flex;
+		gap: 0.75rem;
+	}
+
+	.social-link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 36px;
+		height: 36px;
+		color: var(--color-gray-dark);
+		border: 1px solid var(--color-gray);
+		border-radius: 50%;
+		transition: all 0.3s ease;
+	}
+
+	.social-link:hover {
+		color: var(--color-purple-dark);
+		border-color: var(--color-purple);
+		background: var(--color-purple-light);
+	}
+
+	.mobile-menu-btn {
+		display: none;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0.5rem;
+	}
+
+	.hamburger {
+		display: block;
+		width: 24px;
+		height: 2px;
+		background: var(--color-black);
+		position: relative;
+	}
+
+	.hamburger::before,
+	.hamburger::after {
+		content: '';
+		position: absolute;
+		width: 24px;
+		height: 2px;
+		background: var(--color-black);
+		left: 0;
+	}
+
+	.hamburger::before {
+		top: -7px;
+	}
+
+	.hamburger::after {
+		top: 7px;
+	}
+
+	@media (max-width: 900px) {
+		.header-container {
+			flex-wrap: wrap;
+		}
+
+		.mobile-menu-btn {
+			display: block;
+		}
+
+		.nav {
+			display: none;
+			width: 100%;
+			order: 3;
+		}
+
+		.nav.open {
+			display: block;
+		}
+
+		.nav-list {
+			flex-direction: column;
+			gap: 0;
+			padding-top: 1rem;
+		}
+
+		.nav-link {
+			padding: 0.75rem 1rem;
+		}
+
+		.social-links {
+			order: 2;
+		}
+	}
+</style>
+
+<script>
+	const menuBtn = document.querySelector('.mobile-menu-btn');
+	const nav = document.querySelector('.nav');
+
+	menuBtn?.addEventListener('click', () => {
+		nav?.classList.toggle('open');
+	});
+</script>

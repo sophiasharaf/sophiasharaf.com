@@ -1,0 +1,164 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<Layout title="Nonprofit Work - Sophia Sharaf">
+	<Navigation />
+
+	<main class="page-content">
+		<div class="container">
+			<h1 class="page-title">Nonprofit Work</h1>
+
+			<p class="intro">
+				Giving back to my community and raising awareness for important causes is something I'm deeply passionate about.
+			</p>
+
+			<section class="section">
+				<h2>Bat Mitzvah Project</h2>
+				<div class="card featured-card">
+					<div class="project-header">
+						<div class="project-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+							</svg>
+						</div>
+						<div>
+							<h3>Partnership with Sharsheret</h3>
+							<span class="organization">Breast Cancer Awareness</span>
+						</div>
+					</div>
+					<p>For my bat mitzvah project, I worked with Sharsheret, a national nonprofit organization supporting Jewish women and families facing breast and ovarian cancer. My project focused on raising awareness about the higher genetic risk of breast cancer among Ashkenazi Jews due to BRCA gene mutations.</p>
+
+					<div class="impact-box">
+						<h4>Why This Matters</h4>
+						<p>Ashkenazi Jewish women have a significantly higher chance of carrying BRCA1 or BRCA2 gene mutations, which increase the risk of breast and ovarian cancer. By raising awareness, more people can get tested and take preventive measures.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2>About Sharsheret</h2>
+				<div class="card">
+					<p>Sharsheret is a national nonprofit organization that supports Jewish women and families facing breast and ovarian cancer. Their programs focus on education, prevention, and support services for those affected by these diseases.</p>
+					<div class="skills">
+						<span class="tag">Health Advocacy</span>
+						<span class="tag">Community Outreach</span>
+						<span class="tag">Education</span>
+						<span class="tag">Genetic Awareness</span>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2>Personal Connection</h2>
+				<div class="quote-card">
+					<blockquote>
+						"As someone who is half Jewish, this cause is personally meaningful to me. I wanted to use my bat mitzvah as an opportunity to make a real difference in my community."
+					</blockquote>
+				</div>
+			</section>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.intro {
+		font-size: 1.15rem;
+		color: var(--color-gray-dark);
+		margin-bottom: 3rem;
+		max-width: 700px;
+		line-height: 1.7;
+	}
+
+	.section {
+		margin-bottom: 3rem;
+	}
+
+	.section h2 {
+		font-size: 1.5rem;
+		margin-bottom: 1.5rem;
+		color: var(--color-black);
+	}
+
+	.featured-card {
+		border-left: 4px solid var(--color-purple);
+	}
+
+	.project-header {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.project-icon {
+		width: 56px;
+		height: 56px;
+		background: var(--color-purple-light);
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--color-purple-dark);
+	}
+
+	.project-header h3 {
+		margin-bottom: 0.25rem;
+	}
+
+	.organization {
+		color: var(--color-gray-dark);
+		font-size: 0.9rem;
+	}
+
+	.impact-box {
+		background: var(--color-gray-light);
+		border-radius: 8px;
+		padding: 1.5rem;
+		margin-top: 1.5rem;
+	}
+
+	.impact-box h4 {
+		color: var(--color-black);
+		margin-bottom: 0.5rem;
+		font-size: 1rem;
+	}
+
+	.impact-box p {
+		color: var(--color-gray-dark);
+		margin: 0;
+		font-size: 0.95rem;
+	}
+
+	.skills {
+		margin-top: 1rem;
+	}
+
+	.quote-card {
+		background: linear-gradient(135deg, var(--color-purple-light) 0%, var(--color-white) 100%);
+		border-radius: 12px;
+		padding: 2.5rem;
+	}
+
+	.quote-card blockquote {
+		font-family: 'Playfair Display', serif;
+		font-size: 1.25rem;
+		font-style: italic;
+		color: var(--color-black);
+		line-height: 1.8;
+		margin: 0;
+		position: relative;
+		padding-left: 2rem;
+	}
+
+	.quote-card blockquote::before {
+		content: '"';
+		position: absolute;
+		left: 0;
+		top: -10px;
+		font-size: 3rem;
+		color: var(--color-purple);
+		font-family: 'Playfair Display', serif;
+	}
+</style>

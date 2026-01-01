@@ -1,0 +1,144 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<Layout title="Stand-Up Comedy - Sophia Sharaf">
+	<Navigation />
+
+	<main class="page-content">
+		<div class="container">
+			<h1 class="page-title">Stand-Up Comedy</h1>
+
+			<p class="intro">
+				Comedy is my way of connecting with people and making them laugh. I've been developing my comedic voice through classes and performances.
+			</p>
+
+			<section class="section">
+				<h2>Performances</h2>
+				<div class="card featured-card">
+					<div class="venue-header">
+						<div class="venue-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+								<path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+								<line x1="12" y1="19" x2="12" y2="23"></line>
+								<line x1="8" y1="23" x2="16" y2="23"></line>
+							</svg>
+						</div>
+						<div>
+							<h3>Gotham Comedy Club</h3>
+							<span class="location">New York City</span>
+						</div>
+					</div>
+					<p>I perform at Gotham Comedy Club as part of my comedy class, one of New York's most iconic comedy venues. This experience has helped me develop my timing, stage presence, and ability to connect with an audience.</p>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2>Training</h2>
+				<div class="card">
+					<h3>Comedy Classes</h3>
+					<p>I've been taking stand-up comedy classes where I learn the craft of joke writing, timing, and performance. These classes culminate in performances at professional comedy venues.</p>
+					<div class="skills">
+						<span class="tag">Joke Writing</span>
+						<span class="tag">Timing</span>
+						<span class="tag">Stage Presence</span>
+						<span class="tag">Improvisation</span>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2>What Comedy Means to Me</h2>
+				<div class="quote-card">
+					<blockquote>
+						"Comedy is about finding the funny in everyday life and sharing it with others. It's taught me to see the world differently and not take myself too seriously."
+					</blockquote>
+				</div>
+			</section>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.intro {
+		font-size: 1.15rem;
+		color: var(--color-gray-dark);
+		margin-bottom: 3rem;
+		max-width: 700px;
+		line-height: 1.7;
+	}
+
+	.section {
+		margin-bottom: 3rem;
+	}
+
+	.section h2 {
+		font-size: 1.5rem;
+		margin-bottom: 1.5rem;
+		color: var(--color-black);
+	}
+
+	.featured-card {
+		border-left: 4px solid var(--color-purple);
+	}
+
+	.venue-header {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.venue-icon {
+		width: 56px;
+		height: 56px;
+		background: var(--color-purple-light);
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--color-purple-dark);
+	}
+
+	.venue-header h3 {
+		margin-bottom: 0.25rem;
+	}
+
+	.location {
+		color: var(--color-gray-dark);
+		font-size: 0.9rem;
+	}
+
+	.skills {
+		margin-top: 1rem;
+	}
+
+	.quote-card {
+		background: linear-gradient(135deg, var(--color-purple-light) 0%, var(--color-white) 100%);
+		border-radius: 12px;
+		padding: 2.5rem;
+	}
+
+	.quote-card blockquote {
+		font-family: 'Playfair Display', serif;
+		font-size: 1.25rem;
+		font-style: italic;
+		color: var(--color-black);
+		line-height: 1.8;
+		margin: 0;
+		position: relative;
+		padding-left: 2rem;
+	}
+
+	.quote-card blockquote::before {
+		content: '"';
+		position: absolute;
+		left: 0;
+		top: -10px;
+		font-size: 3rem;
+		color: var(--color-purple);
+		font-family: 'Playfair Display', serif;
+	}
+</style>

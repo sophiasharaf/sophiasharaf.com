@@ -1,0 +1,153 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<Layout title="Theater - Sophia Sharaf">
+	<Navigation />
+
+	<main class="page-content">
+		<div class="container">
+			<h1 class="page-title">Theater</h1>
+
+			<p class="intro">
+				Theater has been a significant part of my life, allowing me to express creativity both on stage and behind the scenes.
+			</p>
+
+			<section class="section">
+				<h2>Experience</h2>
+				<div class="experience-grid">
+					<div class="card">
+						<h3>Stage Performances</h3>
+						<p>Various roles in school and community theater productions, developing my acting skills and stage presence.</p>
+					</div>
+					<div class="card">
+						<h3>Backstage Work</h3>
+						<p>Experience in technical theater, including set design, lighting, and stage management.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2>Resume</h2>
+				<div class="card resume-card">
+					<p>View my complete theater resume with all productions, roles, and technical work.</p>
+					<a href="#" class="btn">Download Resume</a>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2>Links</h2>
+				<div class="links-grid">
+					<a href="#" class="link-card">
+						<div class="link-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+								<polyline points="15 3 21 3 21 9"></polyline>
+								<line x1="10" y1="14" x2="21" y2="3"></line>
+							</svg>
+						</div>
+						<span>Backstage Account</span>
+					</a>
+					<a href="#" class="link-card">
+						<div class="link-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+								<path d="M14.31 9.588v.005c-.077-.048-.227-.07-.42-.07v4.815c.27 0 .44-.06.5-.165.062-.104.095-.39.095-.852v-2.857c0-.345-.013-.572-.042-.681-.03-.11-.067-.167-.133-.195z"/>
+								<path d="M22.416 0H1.584C.71 0 0 .71 0 1.584v20.832C0 23.29.71 24 1.584 24h20.832c.874 0 1.584-.71 1.584-1.584V1.584C24 .71 23.29 0 22.416 0z"/>
+							</svg>
+						</div>
+						<span>IMDb Profile</span>
+					</a>
+				</div>
+			</section>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.intro {
+		font-size: 1.15rem;
+		color: var(--color-gray-dark);
+		margin-bottom: 3rem;
+		max-width: 700px;
+		line-height: 1.7;
+	}
+
+	.section {
+		margin-bottom: 3rem;
+	}
+
+	.section h2 {
+		font-size: 1.5rem;
+		margin-bottom: 1.5rem;
+		color: var(--color-black);
+	}
+
+	.experience-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+	}
+
+	.resume-card {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	.resume-card p {
+		flex: 1;
+		min-width: 200px;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 0.75rem 1.5rem;
+		background: var(--color-black);
+		color: var(--color-white);
+		border-radius: 8px;
+		font-weight: 500;
+		transition: all 0.3s ease;
+	}
+
+	.btn:hover {
+		background: var(--color-purple-dark);
+		color: var(--color-white);
+	}
+
+	.links-grid {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.link-card {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 1rem 1.5rem;
+		background: var(--color-white);
+		border: 1px solid var(--color-gray);
+		border-radius: 8px;
+		color: var(--color-black);
+		transition: all 0.3s ease;
+	}
+
+	.link-card:hover {
+		border-color: var(--color-purple);
+		background: var(--color-purple-light);
+		color: var(--color-purple-dark);
+	}
+
+	.link-icon {
+		color: var(--color-purple-dark);
+	}
+
+	@media (max-width: 600px) {
+		.experience-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

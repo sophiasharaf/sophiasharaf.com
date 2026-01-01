@@ -1,0 +1,131 @@
+---
+interface Props {
+	title?: string;
+}
+
+const { title = "Sophia Sharaf" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--color-black: #1a1a1a;
+		--color-white: #ffffff;
+		--color-gray-light: #f5f5f5;
+		--color-gray: #e0e0e0;
+		--color-gray-dark: #6b6b6b;
+		--color-purple: #c9b8e8;
+		--color-purple-light: #e8e0f5;
+		--color-purple-dark: #9b7dc7;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		min-height: 100vh;
+		font-family: 'Inter', sans-serif;
+		background-color: var(--color-white);
+		color: var(--color-black);
+		line-height: 1.6;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Playfair Display', serif;
+		font-weight: 600;
+	}
+
+	a {
+		color: var(--color-purple-dark);
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+
+	a:hover {
+		color: var(--color-black);
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	.page-content {
+		padding: 4rem 0;
+	}
+
+	.page-title {
+		font-size: 2.5rem;
+		margin-bottom: 2rem;
+		color: var(--color-black);
+		position: relative;
+		display: inline-block;
+	}
+
+	.page-title::after {
+		content: '';
+		position: absolute;
+		bottom: -8px;
+		left: 0;
+		width: 60px;
+		height: 3px;
+		background-color: var(--color-purple);
+	}
+
+	.card {
+		background: var(--color-white);
+		border: 1px solid var(--color-gray);
+		border-radius: 12px;
+		padding: 2rem;
+		margin-bottom: 1.5rem;
+		transition: box-shadow 0.3s ease, transform 0.3s ease;
+	}
+
+	.card:hover {
+		box-shadow: 0 8px 30px rgba(155, 125, 199, 0.15);
+		transform: translateY(-2px);
+	}
+
+	.card h3 {
+		color: var(--color-black);
+		margin-bottom: 0.75rem;
+	}
+
+	.card p {
+		color: var(--color-gray-dark);
+	}
+
+	.tag {
+		display: inline-block;
+		background: var(--color-purple-light);
+		color: var(--color-purple-dark);
+		padding: 0.25rem 0.75rem;
+		border-radius: 20px;
+		font-size: 0.85rem;
+		margin-right: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+</style>

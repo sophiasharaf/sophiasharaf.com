@@ -1,0 +1,191 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<Layout title="Research - Sophia Sharaf">
+	<Navigation />
+
+	<main class="page-content">
+		<div class="container">
+			<h1 class="page-title">Research</h1>
+
+			<p class="intro">
+				I'm currently involved in meaningful research at two prestigious institutions, focusing on cancer disparities and prevention.
+			</p>
+
+			<section class="section">
+				<h2>Current Research</h2>
+				<div class="research-grid">
+					<div class="card research-card">
+						<div class="institution-badge">Memorial Sloan Kettering</div>
+						<h3>Immigrant Health and Cancer Disparities</h3>
+						<p>Working with the Immigrant Health and Cancer Disparities group at MSK to study how immigration status and background affect cancer outcomes and access to healthcare.</p>
+						<div class="focus-areas">
+							<h4>Focus Areas:</h4>
+							<ul>
+								<li>Health disparities in immigrant populations</li>
+								<li>Access to cancer screening and treatment</li>
+								<li>Cultural factors in healthcare</li>
+							</ul>
+						</div>
+					</div>
+					<div class="card research-card">
+						<div class="institution-badge">Cornell University</div>
+						<h3>Genetics and Personalized Cancer Prevention</h3>
+						<p>Contributing to research with the Genetics and Personalized Cancer Prevention Program at Cornell, exploring how genetic information can be used to prevent cancer.</p>
+						<div class="focus-areas">
+							<h4>Focus Areas:</h4>
+							<ul>
+								<li>Genetic risk assessment</li>
+								<li>Personalized prevention strategies</li>
+								<li>BRCA gene research</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2>Why This Research Matters</h2>
+				<div class="card">
+					<p>Cancer affects millions of people worldwide, but not everyone has equal access to prevention, screening, and treatment. My research focuses on understanding and addressing these disparities, with a special interest in how genetic factors can help personalize cancer prevention strategies.</p>
+					<div class="skills">
+						<span class="tag">Cancer Research</span>
+						<span class="tag">Health Equity</span>
+						<span class="tag">Genetics</span>
+						<span class="tag">Public Health</span>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2>Research Institutions</h2>
+				<div class="institutions-grid">
+					<div class="institution-card">
+						<h4>Memorial Sloan Kettering Cancer Center</h4>
+						<p>World-renowned cancer treatment and research center in New York City</p>
+					</div>
+					<div class="institution-card">
+						<h4>Cornell University</h4>
+						<p>Ivy League research university with leading programs in genetics and medicine</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.intro {
+		font-size: 1.15rem;
+		color: var(--color-gray-dark);
+		margin-bottom: 3rem;
+		max-width: 700px;
+		line-height: 1.7;
+	}
+
+	.section {
+		margin-bottom: 3rem;
+	}
+
+	.section h2 {
+		font-size: 1.5rem;
+		margin-bottom: 1.5rem;
+		color: var(--color-black);
+	}
+
+	.research-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+	}
+
+	.research-card {
+		border-top: 4px solid var(--color-purple);
+	}
+
+	.institution-badge {
+		display: inline-block;
+		background: var(--color-purple-light);
+		color: var(--color-purple-dark);
+		padding: 0.25rem 0.75rem;
+		border-radius: 20px;
+		font-size: 0.8rem;
+		font-weight: 500;
+		margin-bottom: 0.75rem;
+	}
+
+	.focus-areas {
+		margin-top: 1.5rem;
+		padding-top: 1rem;
+		border-top: 1px solid var(--color-gray);
+	}
+
+	.focus-areas h4 {
+		font-size: 0.9rem;
+		color: var(--color-black);
+		margin-bottom: 0.75rem;
+	}
+
+	.focus-areas ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.focus-areas li {
+		color: var(--color-gray-dark);
+		font-size: 0.9rem;
+		padding: 0.25rem 0;
+		padding-left: 1.25rem;
+		position: relative;
+	}
+
+	.focus-areas li::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 6px;
+		height: 6px;
+		background: var(--color-purple);
+		border-radius: 50%;
+	}
+
+	.skills {
+		margin-top: 1rem;
+	}
+
+	.institutions-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+	}
+
+	.institution-card {
+		background: var(--color-gray-light);
+		border-radius: 12px;
+		padding: 1.5rem;
+	}
+
+	.institution-card h4 {
+		color: var(--color-black);
+		margin-bottom: 0.5rem;
+		font-size: 1rem;
+	}
+
+	.institution-card p {
+		color: var(--color-gray-dark);
+		font-size: 0.9rem;
+		margin: 0;
+	}
+
+	@media (max-width: 768px) {
+		.research-grid,
+		.institutions-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
