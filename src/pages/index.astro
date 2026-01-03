@@ -44,9 +44,7 @@ import Navigation from '../components/Navigation.astro';
 			</div>
 			<div class="hero-visual">
 				<div class="photo-frame">
-					<div class="photo-placeholder">
-						<span>Photo</span>
-					</div>
+					<img src="/sophia-photo.jpg" alt="Sophia Sharaf" class="hero-photo" />
 					<div class="photo-accent"></div>
 				</div>
 			</div>
@@ -259,17 +257,11 @@ import Navigation from '../components/Navigation.astro';
 		position: relative;
 	}
 
-	.photo-placeholder {
+	.hero-photo {
 		width: 320px;
 		height: 400px;
-		background: white;
+		object-fit: cover;
 		border-radius: 24px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: var(--color-gray-400);
-		font-size: 1.25rem;
-		font-weight: 500;
 		box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
 		position: relative;
 		z-index: 2;
@@ -457,7 +449,7 @@ import Navigation from '../components/Navigation.astro';
 			justify-content: center;
 		}
 
-		.photo-placeholder {
+		.hero-photo {
 			width: 250px;
 			height: 320px;
 		}
